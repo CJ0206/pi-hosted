@@ -2,6 +2,8 @@
 
 I've used the ARM64 Template to pull my Docker images from [Pi-Hosted](https://github.com/pi-hosted/pi-hosted), these are just a few notes to remind me how I set a few thing up should anything happen to my Pi.
 
+You can install various remote file browsers and terminals to access your set up online but I like using [Portable Apps](https://portableapps.com/) to run various programs, for Pi-Hosted stuff I would recommend checking out [Kitty](https://portableapps.com/apps/internet/kitty-portable) (there's also [PuTTY](https://portableapps.com/apps/internet/putty_portable) if you prefer) for SSH and [FileZilla](https://portableapps.com/apps/internet/filezilla_portable) for SFTP.
+
 <details>
 <summary><h2>Setting up Docker and Portainer</h2></summary>
 
