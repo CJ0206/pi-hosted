@@ -168,6 +168,16 @@ Once NextCloud has finished activating go to `https://` followed by your Pi's IP
 
 Run the configuration wizard and go to the web pannel when prompted, navigate to `nc-trusted-domains` and add your Raspberry Pi's IP address as a trusted domain (along with any other domains you intend to access NextCloud with). Go through the other settings when you have time and update as necessary, especially the `nc-admin` tab where you can set a new password.
 
+<details>
+<summary><h4>Trusted domains not working &#10067</h4></summary>
+
+You can manually add trusted domains by editing the `config.php`:
+`sudo nano /portainer/Files/AppData/Config/ncdata/nextcloud/config/config.php`
+
+Just look for the 'trusted_domains' array.
+
+</details>
+
 Go to `https://` followed by your Pi's IP followed by `:8443` in the browser to set up your account (e.g. `https://192.168.1.22:8443`) and enter your username and the bottom password you coppied and you should be in.
 
 Click on your profile image and apps to add any apps, including the ability to edit files within next cloud or make calls through the platform.
