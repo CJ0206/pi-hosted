@@ -249,7 +249,7 @@ When adding external access make sure to enable `Block Common Exploits`, I would
 <details>
 <summary><h2>Setting up external access with <a href="https://my.freenom.com/clientarea.php" target="_blank">FreeNom</a> and <a href="https://www.cloudflare.com/dns/" target="_blank">Cloud Flare</a> </h2></summary>
 
-Presuming you have already set up [Nginx Proxy Manager](https://github.com/CJ0206/pi-hosted/edit/main/README.md#setting-up-nginx-proxy-manager) we'll quickly go over exposing your new containers to the world so you can access them from outside of your network.
+Presuming you have already set up [Nginx Proxy Manager](#setting-up-nginx-proxy-manager) we'll quickly go over exposing your new containers to the world so you can access them from outside of your network.
 
 Set up a free URL using [FreeNom](https://my.freenom.com/clientarea.php) (or go with your favorite paid service) and purchase a domain.
 
