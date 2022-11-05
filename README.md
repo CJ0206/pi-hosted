@@ -174,7 +174,7 @@ Run the configuration wizard and go to the web pannel when prompted, navigate to
 You can manually add trusted domains by editing the `config.php`:
 `sudo nano /portainer/Files/AppData/Config/ncdata/nextcloud/config/config.php`
 
-Just look for the 'trusted_domains' array.
+Just look for the `trusted_domains` array.
 
 </details>
 
