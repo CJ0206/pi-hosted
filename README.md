@@ -5,6 +5,28 @@ I've used the ARM64 Template to pull my Docker images from [Pi-Hosted](https://g
 You can install various remote file browsers and terminals to access your set up online but I like using [Portable Apps](https://portableapps.com/) to run various programs, for Pi-Hosted stuff I would recommend checking out [Kitty](https://portableapps.com/apps/internet/kitty-portable) (there's also [PuTTY](https://portableapps.com/apps/internet/putty_portable) if you prefer) for SSH and [FileZilla](https://portableapps.com/apps/internet/filezilla_portable) for SFTP.
 
 <details>
+<summary><h4>Getting permission denied error when trying to access folders &#10067</h4></summary>
+
+By default some folders are set up with different access meaning you may not have access to them (777 means everyone can read / write / execute, 755 means everyone can read / execute but ownly the owner can write, 644 means everyone can execute but only the owner can read / write. 777 is a major security risk and should never be used.)
+
+The easiest way to gain SFTP access is to change the file ownership from `root` to your user (in this example `pi`):
+```
+sudo chown -R [user]:[group] [folder]
+```
+
+e.g.
+```
+sudo chown -R pi:pi /portainer/Files/Plex/Movies
+```
+to change ownership back to its defult:
+
+```
+sudo chown -R root:root /portainer/Files/Plex/Movies
+```
+
+</details>
+
+<details>
 <summary><h2>Setting up Docker and Portainer</h2></summary>
 
 First ensure git is installed by typing `git` into the terminal, if it's not then run `sudo apt install git`.
