@@ -88,7 +88,7 @@ Here you can change your dashboard title, subtitle, logo, default theme, etc. Yo
 
 You can use icons for your various apps by using font awesome (such as a cloud `icon: "fas fa-cloud"`) or by uploading your own logos to the Pi (such as nginx `logo: "assets/icons/nginx.png"` which would be saved to `/portainer/Files/AppData/Config/Homer/assets/icons/`). 
 
-You can also display some custom service information, such as if PiHole is enabled and the % of blocked queeries by adding a type to the yml (`type: "PiHole"`). For a full list of available custom service information you can check [here](https://github.com/bastienwirtz/homer/blob/main/docs/customservices.md) 
+You can also display some custom service information, such as if PiHole is enabled and the % of blocked queeries by adding a type to the yml (`type: "PiHole"`). For a full list of available custom service information you can check [here](https://github.com/bastienwirtz/homer/blob/main/docs/customservices.md).
 
 </details>
 
@@ -305,7 +305,7 @@ If you are using a home network with a dynamic IP address you will want to set y
 9. Enter your domain (in the example above it would be `coolsite.tk`)
 10. Deploy the container
 
-Go to the Nginx Proxy Manager dashboard and set up your domain to the container you wish (in our example `coolsite.tk` would be to one container, and `blog.coolsite.com` would be to another. `www.coolsite.com` would be set up as another proxy to go to the same place as `coolsite.com`)
+Go to the Nginx Proxy Manager dashboard and set up your domain to the container you wish (in our example `coolsite.tk` would be to one container, and `blog.coolsite.com` would be to another. (`www.coolsite.com` should be set up as another proxy to go to the same place as `coolsite.com`)
 
 </details>
 
