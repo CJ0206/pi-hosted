@@ -271,7 +271,7 @@ When adding external access make sure to enable `Block Common Exploits`, I would
 </details>
 
 <details>
-<summary><h2>Setting up external access with <a href="https://my.freenom.com/clientarea.php" target="_blank">FreeNom</a> and <a href="https://www.cloudflare.com/dns/" target="_blank">Cloud Flare</a> </h2></summary>
+<summary><h2>Setting up external access with <a href="https://my.freenom.com/clientarea.php" target="_blank">FreeNom</a> and <a href="https://www.cloudflare.com/dns/" target="_blank">Cloudflare</a> </h2></summary>
 
 Presuming you have already set up [Nginx Proxy Manager](#setting-up-nginx-proxy-manager) we'll quickly go over exposing your new containers to the world so you can access them from outside of your network.
 
@@ -306,5 +306,53 @@ If you are using a home network with a dynamic IP address you will want to set y
 10. Deploy the container
 
 Go to the Nginx Proxy Manager dashboard and set up your domain to the container you wish (in our example `coolsite.tk` would be to one container, and `blog.coolsite.com` would be to another. `www.coolsite.com` would be set up as another proxy to go to the same place as `coolsite.com`)
+
+</details>
+
+<details>
+<summary><h2>Setting Discord alerts with <a href="https://github.com/louislam/uptime-kuma" target="_blank">Uptime Kuma</a></h2></summary>
+
+When setting up notifications from Uptime Kuma to Discord you can use embed formatting in the prefix custom message:
+
+| Type                  | embed format        | Output        |
+| --------------------- |:-------------------:| -------------:|
+| Menion user name      | <@Discord_User_ID>  | @Discord_user |
+| Mention user nickname | <@!Discord_User_ID> | @Discord      |
+| Mention channel       | <#Channel_ID>       | #How_to       |
+| Mention role          | <@&Role_ID>         | @Admins       |
+| Custom emoji          | <:Name:ID>          | 🔥            |
+
+</details>
+
+<details>
+<summary><h2>Make <a href="https://github.com/docker-library/docs/tree/master/wordpress" target="_blank">Wordpress</a> accessible externally with <a href="https://www.cloudflare.com/dns/" target="_blank">Cloudflare</a> and <a href="https://github.com/pi-hosted/pi-hosted/blob/master/docs/nginx_proxy_manager.md" target="_blank">Nginx Proxy Manager</a></h2></summary>
+
+#### 1. Setting your URL on Wordpress
+
+On Wordpress set your URL on the admin dashboard under `Settings` > `General`:
+
+![WordPress set URL](https://cdn4.wpbeginner.com/wp-content/uploads/2019/10/wordpress-address-site-address.png)
+
+#### 2. Adding a redirect and SSL certificate to your Wordpress on Nginx Proxy Manager
+
+Add your domain with and without the *WWW* prefix to your Domain Names, set the IP address to your Pi hosting Portainer and port to Wordpress (`5080` by default), and select `Block Common Exploits`:
+  
+![WordPress New Proxy Host](https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/docs/images/WordPress_New_Proxy_Host.PNG)
+
+Navigate to the `SSL` tab, agree to the terms of service and save:
+  
+![WordPress Adding SSL Certificate](https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/docs/images/WordPress_Adding_SSL_Certificate.PNG)
+
+It may take some time but your SSL tab should look like the below once all is done, I have turned on `Force SSL`, `HTTP/2 Support`, and `HSTS Enabled`:
+
+![WordPress Enable SSL Certificate](https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/docs/images/WordPress_Enable_SSL_Certificate.PNG)
+
+#### 3. Extra steps required on Cloudflare</h3>
+
+If you haven't already set up Cloudflare check out the [Setting up external access with FreeNom and Cloudflare](https://github.com/CJ0206/pi-hosted/edit/main/README.md#setting-up-external-access-with-freenom-and-cloudflare-) section.
+
+On Cloudflare, under `SSL/TLS` > `Overview` ensure `Full` or `Full (Strict)` is selected, before setting this my Wordpress site would not load:
+
+![Cloudflare SSL Certificate](https://cdn2.wpbeginner.com/wp-content/uploads/2022/04/cloudflare-dashboard-ssl.png)
 
 </details>
