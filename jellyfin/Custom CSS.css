@@ -1,0 +1,66 @@
+/* Change login background (/Branding/Splashscreen can be changed to a URL) */
+#loginPage {
+    background-image: url('/Branding/Splashscreen?format=jpg&foregroundLayer=0.15');
+    background-position: center;
+    background-size: cover;
+}
+
+/* Narrow the login form, size according to display size (bigger on mobile) */
+#loginPage .readOnlyContent, #loginPage form {max-width: 22em;}
+
+/* Hide "Please login" text, margin is to prevent login form moving too far up */
+#loginPage h1 {display: none}
+#loginPage .padded-left.padded-right.padded-bottom-page {margin-top: 50px}
+
+/* Hide "manual" and "forgot" buttons */
+#loginPage .raised.cancel.block.btnManual.emby-button {display: none}
+#loginPage .raised.cancel.block.btnForgotPassword.emby-button {display: none}
+
+/* Size episode preview images in a more compact way */
+.listItemImage.listItemImage-large.itemAction.lazy {
+  height: 110px;
+}
+.listItem-content {
+  height: 115px;
+}
+.secondary.listItem-overview.listItemBodyText {
+  height: 61px;
+  margin: 0;
+}
+
+/* Rounded corners and square hover buttons */
+.cardContent-button, 
+.cardContent-shadow, 
+.itemDetailImage, 
+.cardOverlayButton-hover, 
+.cardOverlayContainer,
+.listItemImage,
+.listItemImageButton,
+.listItemButton,
+.headerButton,
+.paper-icon-button-light
+{border-radius: 6px;}
+
+/* Minimalistic play buttons */
+.listItemImageButton-icon {padding: 0;}
+.cardOverlayFab-primary {background-color: #00000000;}
+.cardOverlayButtonIcon {background-color: #00000000 !important;}
+
+/* Theme some dialogues */
+.dialog {border-radius: 6px !important; background-color: rgba(0, 0, 0, 0.9);}
+.actionSheetMenuItem:hover {background-color: rgba(0, 164, 220, 0.2);}
+.mainDrawer {background-color: rgba(0, 0, 0, 0.9);}
+.navMenuOption:hover {background: rgba(0, 164, 220, 0.2);}
+
+/* Banner transparency and larger font, adjust both "size-adjust" and "size" to modify font size */
+.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred {background:none; background-color:rgba(0, 0, 0, 0);}
+.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.noHomeButtonHeader {background:none; background-color: rgba(0, 0, 0, 0);}
+.headerTabs.sectionTabs {text-size-adjust: 110%;  font-size: 110%;}
+.pageTitle {margin-top: auto; margin-bottom: auto;}
+.emby-tab-button {padding: 1.75em 1.7em;}
+
+/* Make watched icon dark and transparent */
+.playedIndicator {background: #00000058; }
+
+/* Change Jellyfin logo in main drawer mobile, login page, and home page */
+.adminDrawerLogo img { content: url(Main_Drwa_Logo_URL) !important; } imgLogoIcon { content: url(Login_Page_Logo_URL) !important; } .pageTitleWithLogo { background-image: url(Home_Page_Logo_URL) !important; }
