@@ -138,26 +138,26 @@ rdma            10              1               1
 #### 2. Folder Setup Script
 Run the below:
 ```
-wget -qO- https://git.io/JPXba | sudo bash
+wget -qO- https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/tools/rpi_docker_monitor.sh | bash
 ```
 
 You should see an output like this:
 ```
-# wget -qO- https://git.io/JPXba | sudo bash
-creating directories
-downloading prometheus config files
---2021-10-17 00:56:28--  https://raw.githubusercontent.com/oijkn/Docker-Raspberry-PI-Monitoring/main/prometheus/prometheus.yml
-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.110.133, 185.199.109.133, 185.199.111.133, ...
-Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.110.133|:443... connected.
+Checking if you are online...Online. Continuing.
+Creating directories...
+Downloading Prometheus config files if they don't exist
+--2022-12-10 10:15:17--  https://raw.githubusercontent.com/oijkn/Docker-Raspberry-PI-Monitoring/main/prometheus/prometheus.yml
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.109.133, 185.199.110.133, 185.199.111.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.109.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 163 [text/plain]
 Saving to: ‘/portainer/Files/AppData/Config/prometheus/config/prometheus.yml’
 
-/portainer/Files/AppData/Config/prometheus/config/promethe 100%[=======================================================================================================================================>]     163  --.-KB/s    in 0s
+/portainer/Files/AppData/Config/prometheus/config/prometheu 100%[========================================================================================================================================>]     163  --.-KB/s    in 0s
 
-2021-10-17 00:56:28 (971 KB/s) - ‘/portainer/Files/AppData/Config/prometheus/config/prometheus.yml’ saved [163/163]
+2022-12-10 10:15:17 (3.77 MB/s) - ‘/portainer/Files/AppData/Config/prometheus/config/prometheus.yml’ saved [163/163]
 
-setting permissions
+Setting permissions...
 Done You are ready to goto next step in the install document
 ```
 
