@@ -1,0 +1,67 @@
+{
+  "title": "Zulip (Single Container)",
+  "name": "zulip-single",
+  "type": 1,
+  "platform": "linux",
+  "categories": [
+    "Chat",
+    "Tools"
+  ],
+  "description": "Single-container Zulip server for testing or small deployments. Based on the official Zulip Docker image.",
+  "logo": "https://zulip.com/static/images/logo/zulip-icon-128x128.png",
+  "image_amd64": "zulip/docker-zulip:latest",
+  "image_arm64": "zulip/docker-zulip:latest",
+  "restart_policy": "unless-stopped",
+
+  "env": [
+    {
+      "name": "SETTINGS_FLAVOR",
+      "label": "Settings Flavor",
+      "default": "development",
+      "description": "Use 'development' for testing or 'production' for real deployments."
+    },
+    {
+      "name": "ZULIP_ADMIN_EMAIL",
+      "label": "Admin Email",
+      "default": "admin@example.com",
+      "description": "Email for the initial Zulip administrator account."
+    },
+    {
+      "name": "ZULIP_ADMIN_PASSWORD",
+      "label": "Admin Password",
+      "default": "changeme",
+      "description": "Password for the initial Zulip administrator account."
+    },
+    {
+      "name": "ZULIP_HOST",
+      "label": "Zulip Hostname",
+      "default": "zulip.local",
+      "description": "Hostname users will access Zulip at."
+    },
+    {
+      "name": "TZ",
+      "label": "Timezone",
+      "default": "Europe/London",
+      "description": "Timezone for the container."
+    }
+  ],
+
+  "ports": [
+    "80:80/tcp",
+    "443:443/tcp"
+  ],
+
+  "volumes": [
+    {
+      "bind": "/portainer/Files/AppData/Config/zulip/data",
+      "container": "/data"
+    },
+    {
+      "bind": "/portainer/Files/AppData/Config/zulip/settings",
+      "container": "/etc/zulip"
+    }
+  ],
+
+  "webpage": "https://zulip.readthedocs.io/projects/docker/en/latest/",
+  "officialDoc": "https://zulip.readthedocs.io/projects/docker/en/latest/how-to/compose-index.html"
+}
