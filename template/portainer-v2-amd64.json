@@ -10026,7 +10026,7 @@
 			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://wiki.znc.in/ZNC\" target=\"_blank\">https://wiki.znc.in/ZNC</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-znc\" target=\"_blank\">https://docs.linuxserver.io/images/docker-znc</a><br><br><br>"
 		},
 		{
-			"title": "Zulip (Single Container)",
+			"title": "Zulip",
 			"name": "zulip-single",
 			"type": 1,
 			"platform": "linux",
@@ -10034,7 +10034,7 @@
 				"Chat",
 				"Tools"
 			],
-			"description": "Single-container Zulip server for testing or small deployments. Includes SMTP support for Zoho or any external mail relay.",
+			"description": "Single-container Zulip server for testing or small deployments. Includes SMTP support for any external mail relay.",
 			"logo": "https://zulip.com/static/images/logo/zulip-icon-128x128.png",
 			"image": "zulip/docker-zulip:latest",
 			"restart_policy": "unless-stopped",
@@ -10073,37 +10073,37 @@
 					"name": "EMAIL_HOST",
 					"label": "SMTP Host",
 					"default": "smtp.zoho.eu",
-					"description": "Zoho SMTP server hostname."
+					"description": "SMTP server hostname."
 				},
 				{
 					"name": "EMAIL_PORT",
 					"label": "SMTP Port",
 					"default": "587",
-					"description": "Zoho SMTP port (587 for TLS)."
+					"description": "SMTP port (587 for TLS)."
 				},
 				{
 					"name": "EMAIL_HOST_USER",
 					"label": "SMTP Username",
 					"default": "your-email@yourdomain.com",
-					"description": "Your full Zoho email address."
+					"description": "Your full email address."
 				},
 				{
 					"name": "EMAIL_HOST_PASSWORD",
 					"label": "SMTP Password",
-					"default": "your-zoho-app-password",
-					"description": "Your Zoho app-specific password."
+					"default": "your-app-password",
+					"description": "Your app-specific password."
 				},
 				{
 					"name": "EMAIL_USE_TLS",
 					"label": "Use TLS",
 					"default": "true",
-					"description": "Enable TLS for Zoho SMTP."
+					"description": "Default true"
 				},
 				{
 					"name": "EMAIL_USE_SSL",
 					"label": "Use SSL",
 					"default": "false",
-					"description": "Zoho does not use SSL on port 587."
+					"description": "Default false"
 				}
 			],
 			"ports": [
