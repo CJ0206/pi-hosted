@@ -1,5 +1,5 @@
 {
-  "title": "Zulip (Single Container)",
+  "title": "Zulip",
   "name": "zulip-single",
   "type": 1,
   "platform": "linux",
@@ -7,10 +7,9 @@
     "Chat",
     "Tools"
   ],
-  "description": "Single-container Zulip server for testing or small deployments. Includes SMTP support for Zoho or any external mail relay.",
+  "description": "Single-container Zulip server for testing or small deployments. Includes SMTP support for any external mail relay.",
   "logo": "https://zulip.com/static/images/logo/zulip-icon-128x128.png",
   "image_amd64": "zulip/docker-zulip:latest",
-  "image_arm64": "zulip/docker-zulip:latest",
   "restart_policy": "unless-stopped",
 
   "env": [
@@ -49,37 +48,37 @@
       "name": "EMAIL_HOST",
       "label": "SMTP Host",
       "default": "smtp.zoho.eu",
-      "description": "Zoho SMTP server hostname."
+      "description": "SMTP server hostname."
     },
     {
       "name": "EMAIL_PORT",
       "label": "SMTP Port",
       "default": "587",
-      "description": "Zoho SMTP port (587 for TLS)."
+      "description": "SMTP port (587 for TLS)."
     },
     {
       "name": "EMAIL_HOST_USER",
       "label": "SMTP Username",
       "default": "your-email@yourdomain.com",
-      "description": "Your full Zoho email address."
+      "description": "Your full email address."
     },
     {
       "name": "EMAIL_HOST_PASSWORD",
       "label": "SMTP Password",
-      "default": "your-zoho-app-password",
-      "description": "Your Zoho app-specific password."
+      "default": "your-app-password",
+      "description": "Your app-specific password."
     },
     {
       "name": "EMAIL_USE_TLS",
       "label": "Use TLS",
       "default": "true",
-      "description": "Enable TLS for Zoho SMTP."
+      "description": "Default true"
     },
     {
       "name": "EMAIL_USE_SSL",
       "label": "Use SSL",
       "default": "false",
-      "description": "Zoho does not use SSL on port 587."
+      "description": "Default false"
     }
   ],
 
