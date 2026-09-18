@@ -4,7 +4,7 @@ List of all apps included in this project with info related to it.
 
 |**Arm32:**          |**Arm64:**|**Amd64:**|**Total:**|
 |:-------------------|:--------:|:--------:|:--------:|
-| 104 apps | 231 apps | 235 apps | 238 apps |
+| 104 apps | 231 apps | 234 apps | 237 apps |
 
 ---
 
@@ -247,4 +247,3 @@ List of all apps included in this project with info related to it.
 |[your-spotify](https://github.com/Yooooomi/your_spotify)|:x:|:heavy_check_mark:|:heavy_check_mark:|Stack| [![](../build/images/blue_doc_icon.png)](https://github.com/Yooooomi/your_spotify#readme) |  |  |  |
 |[YouTubeDL-Material](https://github.com/Tzahi12345/YoutubeDL-Material)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://github.com/Tzahi12345/YoutubeDL-Material#docker) |  |  |  |
 |[ZNC](https://wiki.znc.in/ZNC)|:x:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://docs.linuxserver.io/images/docker-znc) |  |  |  |
-|[Zulip](https://zulip.readthedocs.io/projects/docker/en/latest/)|:x:|:x:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://zulip.readthedocs.io/projects/docker/en/latest/how-to/compose-index.html) |  |  |  |
