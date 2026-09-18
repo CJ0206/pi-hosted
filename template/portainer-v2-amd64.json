@@ -450,6 +450,42 @@
 		},
 		{
 			"categories": [
+				"Media",
+				"Audiobooks"
+			],
+			"description": "A self-hosted Audible-style audiobook & podcast server with full M4B chapter support.",
+			"image": "ghcr.io/advplyr/audiobookshelf:latest",
+			"logo": "https://raw.githubusercontent.com/advplyr/audiobookshelf/master/frontend/public/logo.png",
+			"name": "audiobookshelf",
+			"platform": "linux",
+			"ports": [
+				"13378:80/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "AudioBookshelf",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/AudioBookshelf/config",
+					"container": "/config"
+				},
+				{
+					"bind": "/portainer/Files/AppData/Config/AudioBookshelf/metadata",
+					"container": "/metadata"
+				},
+				{
+					"bind": "/portainer/Files/AudioBooks",
+					"container": "/audiobooks"
+				},
+				{
+					"bind": "/portainer/Files/Podcasts",
+					"container": "/podcasts"
+				}
+			],
+			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://audiobookshelf.org\" target=\"_blank\">https://audiobookshelf.org</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/advplyr/audiobookshelf\" target=\"_blank\">https://github.com/advplyr/audiobookshelf</a><br><br><br>"
+		},
+		{
+			"categories": [
 				"Other",
 				"Tools",
 				"Authentication"
