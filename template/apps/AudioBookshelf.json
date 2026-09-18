@@ -26,11 +26,11 @@
       "container": "/metadata"
     },
     {
-      "bind": "/portainer/Files/AppData/AudioBooks",
+      "bind": "/portainer/Files/AudioBooks",
       "container": "/audiobooks"
     },
     {
-      "bind": "/portainer/Files/AppData/Podcasts",
+      "bind": "/portainer/Files/Podcasts",
       "container": "/podcasts"
     }
   ],
